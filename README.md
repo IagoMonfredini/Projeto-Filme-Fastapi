@@ -1,68 +1,73 @@
-🎬 Gerenciador de Filmes
+# 🎬 Gerenciador de Filmes
 
-O Gerenciador de Filmes é um sistema completo desenvolvido em Python, que permite cadastrar, listar e atualizar filmes através de uma interface amigável construída com Streamlit, conectada a uma API REST desenvolvida com FastAPI.
+Bem-vindo ao projeto Gerenciador de Filmes, um sistema completo desenvolvido em Python, que une FastAPI e Streamlit para gerenciar um catálogo de filmes.
+Com ele, é possível listar, adicionar e atualizar informações sobre filmes de forma prática e interativa.
 
-O objetivo é oferecer um exemplo prático de integração entre frontend e backend, aplicando conceitos de CRUD (Create, Read, Update, Delete) e banco de dados relacional.
+## 🖼️ Visão Geral
 
-🚀 Tecnologias Utilizadas
-💻 Frontend
+O Gerenciador de Filmes foi criado com o objetivo de demonstrar a integração entre uma API REST (FastAPI) e uma interface web interativa (Streamlit).
+A aplicação oferece um sistema CRUD simples e funcional, permitindo que o usuário controle facilmente os dados de filmes em um banco de dados relacional.
 
-Streamlit → Criação da interface web interativa.
+## 🧱 Estrutura do Projeto
 
-Requests → Comunicação entre o frontend e o backend (API FastAPI).
+## 📂 gerenciador-filmes
+│
+├── app.py → Interface principal em Streamlit (frontend)
+├── api.py → API FastAPI com rotas para manipulação dos dados
+├── funcao.py → Funções responsáveis pelas operações no banco de dados
+├── conexao.py → Configuração e conexão com o banco de dados
+├── requirements.txt → Lista de dependências do projeto
+└── README.md → Documentação do sistema
 
-⚙️ Backend
+## 🧭 Navegação (Interface Streamlit)
 
-FastAPI → Criação da API REST.
+O menu lateral do sistema contém as seguintes seções:
 
-Uvicorn → Servidor ASGI para rodar o FastAPI.
+## 🎞️ Catálogo – Exibe todos os filmes cadastrados no banco
 
-PostgreSQL / SQLite / outro banco relacional → Armazenamento dos dados.
+## ➕ Adicionar Filmes – Permite registrar novos filmes
 
-psycopg2 (ou similar) → Conexão com o banco de dados.
+## ✏️ Atualizar Filmes – Atualiza a avaliação dos filmes existentes
 
-🧩 Estrutura do Projeto
-📂 gerenciador_filmes
-├── app.py               # Interface Streamlit (frontend)
-├── api.py               # API FastAPI (backend)
-├── funcao.py            # Funções CRUD e conexão com o banco
-├── conexao.py           # Script de conexão ao banco de dados
-├── requirements.txt      # Dependências do projeto
-└── README.md            # Documentação
+Cada ação é realizada através de botões e campos interativos que se comunicam diretamente com a API FastAPI.
 
-🧠 Funcionalidades
-🎥 Streamlit (Interface)
+## ⚙️ Tecnologias Utilizadas
 
-O usuário pode:
+Python 3.9+ – Linguagem principal do projeto
 
-📖 Visualizar o catálogo de filmes cadastrados.
+FastAPI – Framework backend para criação de APIs REST
 
-➕ Adicionar novos filmes informando título, gênero, ano e avaliação.
+Streamlit – Framework frontend para interfaces interativas
 
-✏️ Atualizar filmes existentes, modificando a avaliação.
+Uvicorn – Servidor ASGI para rodar a aplicação FastAPI
 
-⚙️ FastAPI (API)
+Requests – Comunicação entre o frontend e a API
 
-Endpoints disponíveis:
+Banco de Dados SQL – Armazenamento dos filmes
 
+psycopg2 / sqlite3 – Driver para conexão com o banco
+
+## 🧩 Endpoints da API
 Método	Rota	Descrição
 GET	/	Mensagem de boas-vindas
-GET	/filmes	Lista todos os filmes
+GET	/filmes	Lista todos os filmes cadastrados
 POST	/filmes	Adiciona um novo filme
 PUT	/filmes/{id_filmes}	Atualiza a avaliação de um filme
-DELETE	/filmes/{id_filmes}	(opcional) Exclui um filme do banco
+(opcional) DELETE	/filmes/{id_filmes}	Exclui um filme do banco
 
-📘 Documentação automática da API:
+## 📘 Documentação automática da API:
 
 Swagger UI → http://127.0.0.1:8000/docs
 
 Redoc → http://127.0.0.1:8000/redoc
 
-⚙️ Como Executar o Projeto
-1️⃣ Clonar o repositório
-git clone https://github.com/usuario/gerenciador-filmes.git
+## 🚀 Como Executar o Projeto
+
+Clone o repositório:
+
+git clone https://github.com/seuusuario/gerenciador-filmes.git
 cd gerenciador-filmes
 
-2️⃣ Instalar dependências
-pip install -r requirements.txt
+Instale as dependências:
 
+pip install -r requirements.txt
