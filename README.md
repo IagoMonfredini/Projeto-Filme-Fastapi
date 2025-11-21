@@ -71,3 +71,9 @@ cd gerenciador-filmes
 Instale as dependências:
 
 pip install -r requirements.txt
+
+### 🧾 Licença
+Este projeto é de uso livre para fins educacionais e demonstração.
+Sinta-se à vontade para modificar e aprimorar conforme suas necessidades.
+
+Iago Monfredini - Coryright
